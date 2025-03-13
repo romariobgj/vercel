@@ -1,0 +1,245 @@
+
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Viva Sorte</title>
+
+  <!-- Estilos -->
+  <link href="css/style.css" rel="stylesheet">
+  <link href="css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/bootstrap-icons.min.css">
+  <link href="css/rodape.css" rel="stylesheet">
+  <link href="css/topo-branco.css" rel="stylesheet">
+
+  <!-- Fontes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+
+  <!-- Scripts -->
+  <script src="js/latest.js" data-utmify-prevent-subids="" async defer></script>
+  <script
+  src="https://cdn.utmify.com.br/scripts/utms/latest.js"
+  data-utmify-prevent-subids
+  async
+  defer
+></script>
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="topo-branco"><center>
+    <img src="https://i.imgur.com/4hotxpk.png" alt="Logo Viva Sorte">
+    </center>
+  </header>
+
+  <!-- Banner -->
+  <section class="banner">
+    <div class="container-banner">
+        <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="images/pagamento.png" class="pagamento-img" alt="Banner Viva Sorte">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+  <!-- Seção de Sorteio -->
+  <section class="sorteio">
+    <div class="sorteio-date text-center">
+      <img src="images/check.svg" class="check" alt="Check">
+      <h1>Pedido Confirmado </h1>
+    </div>
+    <div class="sorteio-date text-center" style="margin-top: -15px;">
+      <br>
+      <p>Seu pedido N.º <strong>5156542178</strong> foi confirmado às<br> <br><br><span id="current-date-time"></span></p>
+
+    <script>
+        // Função para exibir a data e hora atuais
+        function displayCurrentDateTime() {
+            const dateTimeElement = document.getElementById("current-date-time");
+            const now = new Date();
+
+            // Formatar a data e hora no formato desejado
+            const formattedDateTime = now.toLocaleString("pt-BR", {
+                year: "numeric",
+                month: "long",
+                day: "numeric",
+                hour: "2-digit",
+                minute: "2-digit",
+                second: "2-digit"
+            });
+
+            // Exibir a data e hora no elemento HTML
+            dateTimeElement.textContent = formattedDateTime;
+        }
+
+        // Chamar a função ao carregar a página
+        displayCurrentDateTime();
+    </script>
+      <h3><strong><?= $name ?></strong></h3>
+      <p><?= $email ?></p>
+    </div>
+
+    <!-- Box Resumo -->
+    <div class="resumo-container">
+      <h2>RESUMO <br> da sua compra</h2>
+      <p>SEU TICKET: <strong><?= $numv ?></strong></p>
+      <div class="total-container">
+        <span>TICKET 19658489546</span>
+        <span>Aprovado</span>
+      </div>
+    </div>
+
+    <!-- Ticket -->
+     <div class="ticket-container">
+      <img src="https://i.imgur.com/Btfsp0X.png" class="ticket" alt="Ticket">
+     </div>
+
+<!-- Audio -->
+
+
+<!-- CTAimg -->
+<div class="ctaimg">
+  <img src="https://i.imgur.com/nzNg2rp.png" class="pigimg" alt="cta"  onclick="openPopup()">
+</div><style>@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1); /* Aumenta em 10% */
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.pigimg {
+  animation: pulse 1.5s infinite; /* 1.5s de duração, repetindo infinitamente */
+  transition: transform 0.3s;
+  cursor: pointer;
+}
+
+.pigimg:hover {
+  transform: scale(1.2); /* Aumenta ao passar o mouse */
+}
+</style>
+
+<!-- Popup -->
+<div id="popup" class="popup-overlay">
+  <div class="popup-content">
+    <span id="close-popup" onclick="closePopup()">x</span>
+    
+    <h2>Parabéns!</h2>
+    <p>Você Ganhou:</p>
+    <h1 class="popup-title">10 MIL REAIS NO PIX</h1>
+    <img src="https://i.imgur.com/b4aC2S1.png" class="popupimgpig" alt="popupimg">
+    <button id="btn-receber">SACAR AGORA</button>
+    <button id="btn-premio">🍀 Veja Seu Título Prêmiado</button>
+
+  </div>
+</div>
+
+    <!-- Viva Privilégios -->
+    <div class="container-principal">
+      <div class="hospital">
+        <div class="card-hospital card-hospital-bg-azul">
+          <div class="card-hospital-image">
+            
+            <h2>SBT da SORTE</h2>
+          </div>
+          <div class="card-hospital-text">
+            <p>SBT da Sorte, um programa que enriquece sua vida com acesso saúde, alimentação, transporte e mais.
+              Com cada compra, acumule pontos para trocar por consultas médicas, receber cashback, e utilizar serviços
+              de telefonia e apps de transporte e alimentação. Eleve sua qualidade de vida e desfrute de mais
+              conveniência e economia!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="rodape">
+    <div class="container-principal">
+      <img class="logo-rodape" src="https://i.imgur.com/4hotxpk.png" alt="Logo Viva Sorte">
+
+      <div class="redes">
+        <i class="bi bi-instagram"></i>
+        <i class="bi bi-facebook"></i>
+        <i class="bi bi-twitter"></i>
+        <i class="bi bi-youtube"></i>
+      </div>
+
+      <p class="informacoes-sorteio">
+        Sorteios lastreados por Títulos de Capitalização, da Modalidade Incentivo, emitidos pela VIA Capitalização S.A,
+        inscrita no CNPJ sob nº 88.076.302/0001-94, e aprovados pela SUSEP através do registro na SUSEP Sorteio n°
+        15414.652257/2023-51. O valor das premiações aqui indicados são líquidos, já descontado o devido imposto de
+        renda de 25%. O registro deste plano na SUSEP não implica, por parte da Autarquia, incentivo ou recomendação à
+        sua comercialização.
+      </p>
+
+      <div class="linha-rodape"></div>
+
+      <div class="patterns-rodape">
+        <div class="pattern-rodape">
+          Títulos emitidos por:
+          <img src="images/viacap.png" alt="Via Capitalização">
+        </div>
+
+        <div class="pattern-rodape">
+          Promoção realizada por:
+          <img src="images/viva.png" alt="Viva Sorte">
+        </div>
+
+        <div class="pattern-rodape">
+          Desenvolvimento:
+          <img src="images/edjdigital.png" alt="EDJ Digital">
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  <script src="js/mainnn.js"></script>
+  <script>
+      $(document).ready(function() {
+        const externalReference = '<?= $externalReference ?>';
+
+        $.ajax({
+          url: `api/index.php?external_reference=${externalReference}`,
+          method: 'GET',
+          dataType: 'json',
+          success: function(data) {
+              console.log("Dados da transação:", data);
+
+              $('#nome').text(data.customer.name);
+              $('#email').text(data.customer.email);
+              $('#numv').text(data.items.length);
+              const amountFormatted = (data.amount / 100).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+              $('#amount').text(amountFormatted);
+
+          },
+          error: function(error) {
+              console.error('Erro ao obter dados da transação:', error);
+              $('#nome').text("");
+              $('#email').text("");
+              $('#numv').text("");
+              $('#amount').text("");
+          }
+
+        });
+
+      });
+
+    </script>
+
+</body>
+</html>
